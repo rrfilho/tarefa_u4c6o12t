@@ -36,9 +36,11 @@ O módulo buttons.h é responsável por inicializar e associar eventos aos botõ
 O módulo leds.h é responsável por inicializar o led RGB e oferece uma interface simples para acende-los individualmente.
 
 ### main
-main.h é responsável por importar todos os módulos supracitados e inicializá-los. Ao chamar o inicializador dos botões, são passados callbacks para os botões tratando as interrupções geradas pelos mesmos. 
+main.h é responsável por importar todos os módulos supracitados e inicializá-los. Ao chamar o inicializador dos botões, são passados callbacks que tratam as interrupções geradas pelos mesmos. 
+
 Quando o botão A é pressionado, o led verde é acesso/apagado e uma mensagem sobre o seu estado é enviada para o serial monitor via UART e para o display (Ex.: O led verde foi ligado). 
 Quando o botão B é pressionado, o led azul é acesso/apagado e uma mensagem sobre o seu estado é enviado para o serial monitor via UART e para o display (Ex.: O led azul foi desligado). 
+
 No loop principal, os comandos recebidos do serial monitor via UART são tratados de acordo com o tipo: caracteres de 'A' à 'Z' (maiúsculas ou minúsculas) são exibidos no display SSD1306 ('Recebido o caractere W') e números de '0' à '9' são exibidos na matriz de leds.
 
 ### Vídeo apresentação
